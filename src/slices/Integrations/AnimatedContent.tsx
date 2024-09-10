@@ -17,9 +17,10 @@
   import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
   gsap.registerPlugin(useGSAP);
-  
+
   export default function AnimatedContent({
     slice,
+    
   }: {
     slice: Content.IntegrationsSlice;
   }) {
