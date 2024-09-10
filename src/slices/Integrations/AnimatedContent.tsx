@@ -13,8 +13,8 @@ import {
   FaFigma,
 } from "react-icons/fa6";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import { useGSAP } from "@gsap/react";
 
 export default function AnimatedContent({
   slice,
@@ -23,7 +23,6 @@ export default function AnimatedContent({
 }) {
   const container = useRef<HTMLDivElement | null>(null);
   const preferReduceMotion = usePrefersReducedMotion();
-  gsap.registerPlugin(useGSAP);
 
   const icons = {
     cloudflare: <FaCloudflare />,

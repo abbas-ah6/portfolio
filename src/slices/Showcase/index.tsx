@@ -4,8 +4,11 @@ import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import clsx from "clsx";
+import dynamic from "next/dynamic";
 import { PiArrowsClockwise, PiGear } from "react-icons/pi";
-import AnimatedContent from "./AnimatedContent";
+const AnimatedContent = dynamic(() => import('./AnimatedContent'), {
+  ssr: false,
+});
 
 const icons = {
   gear: <PiGear />,
