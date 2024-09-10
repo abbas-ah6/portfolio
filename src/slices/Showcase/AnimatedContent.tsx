@@ -14,7 +14,7 @@ export default function AnimatedContent({
 }) {
   const container = useRef(null);
   const preferReduceMotion = usePrefersReducedMotion();
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   if (preferReduceMotion) {
     gsap.set(container.current, { y: 0 });
