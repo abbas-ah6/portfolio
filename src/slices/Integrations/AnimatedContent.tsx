@@ -44,7 +44,7 @@ export default function AnimatedContent({
       });
 
       tl.to(".pulsing-logo", {
-        keyFrames: [
+        keyframes: [
           {
             filter: "brightness(2)",
             opacity: 1,
@@ -62,7 +62,7 @@ export default function AnimatedContent({
       tl.to(
         ".signal-line",
         {
-          keyFrames: [
+          keyframes: [
             { backgroundPosition: "0% 0%" },
             {
               backgroundPosition: "100% 100%",
@@ -74,22 +74,21 @@ export default function AnimatedContent({
             },
           ],
         },
-        "-=1.4",
       );
       tl.to(".pulsing-icon", {
-        keyFrames: [
+        keyframes: [
           {
             opacity: 1,
-            stagger: { from: "center", each: 0.3 },
+            stagger: { from: 'center', each: 0.3 },
             duration: 1,
           },
           {
             opacity: 0.4,
+            stagger: { from: 'center', each: 0.3 },
             duration: 1,
-            stagger: { from: "center", each: 0.3 },
           },
-        ],
-      });
+        ]
+      }, "-=1.8",);
     },
     { scope: container },
   );

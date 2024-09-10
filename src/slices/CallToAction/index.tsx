@@ -1,3 +1,5 @@
+"use client"
+
 import { Content } from "@prismicio/client";
 import { PrismicText, SliceComponentProps } from "@prismicio/react";
 import PlainLogo from "./PlainLogo";
